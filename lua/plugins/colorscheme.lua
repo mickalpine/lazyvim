@@ -5,7 +5,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      colorscheme = "nightfox",
+      colorscheme = "nightfly",
     },
   },
 
@@ -15,6 +15,7 @@ return {
   { "haishanh/night-owl.vim", lazy = false },
   { "arturgoms/moonbow.nvim", lazy = false },
   { "Shatur/neovim-ayu", lazy = false },
+  { "rose-pine/neovim", lazy = false },
 
   {
     "folke/tokyonight.nvim",

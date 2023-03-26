@@ -4,6 +4,7 @@ return {
     lazy = false,
     cmd = { "ToggleTerm", "TermExec" },
     opts = {
+      autochdir = true,
       close_on_exit = true,
       -- direction = "float",
       -- direction = "horizontal",
