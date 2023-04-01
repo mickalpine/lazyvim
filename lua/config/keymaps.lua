@@ -27,3 +27,6 @@ local opts = { noremap = true }
 map("n", "<leader>tf", "<cmd>ToggleTerm direction=float size=40<CR>", opts)
 map("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=40<CR>", opts)
 map("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal size=10<CR>", opts)
+
+-- ZenMode
+map("n", "<leader>uz", "<cmd>ZenMode<CR>", opts)
