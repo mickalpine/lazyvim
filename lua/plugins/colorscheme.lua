@@ -5,21 +5,18 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "rose-pine",
     },
   },
 
-  { "ellisonleao/gruvbox.nvim", lazy = false },
   { "EdenEast/nightfox.nvim", lazy = false },
-  { "bluz71/vim-nightfly-colors", lazy = false },
-  { "haishanh/night-owl.vim", lazy = false },
-  { "arturgoms/moonbow.nvim", lazy = false },
   { "Shatur/neovim-ayu", lazy = false },
+  { "arturgoms/moonbow.nvim", lazy = false },
+  { "bluz71/vim-moonfly-colors", lazy = false },
+  { "bluz71/vim-nightfly-colors", lazy = false },
+  { "ellisonleao/gruvbox.nvim", lazy = false },
+  { "folke/tokyonight.nvim", lazy = false },
+  { "haishanh/night-owl.vim", lazy = false },
+  { "nyoom-engineering/oxocarbon.nvim", lazy = false },
   { "rose-pine/neovim", lazy = false },
-
-  {
-    "folke/tokyonight.nvim",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000,
-  },
 }
