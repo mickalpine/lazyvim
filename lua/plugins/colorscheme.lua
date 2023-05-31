@@ -14,6 +14,7 @@ return {
   { "arturgoms/moonbow.nvim", lazy = false },
   { "bluz71/vim-moonfly-colors", lazy = false },
   { "bluz71/vim-nightfly-colors", lazy = false },
+  { "catppuccin/nvim", name = "catppuccin", lazy = false },
   { "ellisonleao/gruvbox.nvim", lazy = false },
   { "folke/tokyonight.nvim", lazy = false },
   { "haishanh/night-owl.vim", lazy = false },
