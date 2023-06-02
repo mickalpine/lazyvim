@@ -5,6 +5,7 @@ return {
     opts = {
       ensure_installed = {
         "black",
+        "bash-language-server",
         "gofumpt",
         "goimports-reviser",
         "golines",
@@ -13,6 +14,7 @@ return {
         "impl",
         "jedi-language-server",
         "json-lsp",
+        "mypy",
         "ruff-lsp",
         "rust-analyzer",
         "shellcheck",
@@ -20,6 +22,7 @@ return {
         "staticcheck",
         "stylua",
         "taplo",
+        "terraform-ls",
       },
     },
   },

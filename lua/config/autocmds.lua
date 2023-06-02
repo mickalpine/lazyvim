@@ -3,3 +3,6 @@
 -- Add any additional autocmds here
 -- ToggleTerm
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
+
+-- Associate tfvars to hcl
+vim.cmd("autocmd! BufNewFile, BufRead *.tfvars set ft=hcl")
