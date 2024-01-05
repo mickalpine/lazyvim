@@ -4,8 +4,8 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "black",
         "bash-language-server",
+        "black",
         "gofumpt",
         "goimports-reviser",
         "golines",
@@ -14,9 +14,8 @@ return {
         "impl",
         "jedi-language-server",
         "json-lsp",
-        "mypy",
+        "pyright",
         "ruff-lsp",
-        "rust-analyzer",
         "shellcheck",
         "shfmt",
         "staticcheck",

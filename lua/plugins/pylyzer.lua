@@ -1,3 +1,6 @@
+if true then
+  return {}
+end
 local on_attach = function(client, bufnr)
   client.server_capabilities.hoverProvider = false
 end
@@ -7,11 +10,14 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        ruff_lsp = {
+        pylyzer = {
           on_attach = on_attach,
-          init_options = {
-            settings = {
-              args = { "--ignore", "E501" },
+          settings = {
+            python = {
+              checkOnType = true,
+              diagnostics = true,
+              inlayHints = true,
+              smartCompletion = true,
             },
           },
         },

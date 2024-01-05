@@ -1,15 +1,12 @@
 return {
   {
     "akinsho/toggleterm.nvim",
-    lazy = false,
+    -- lazy = false,
     cmd = { "ToggleTerm", "TermExec" },
     opts = {
       autochdir = true,
       close_on_exit = true,
-      -- direction = "float",
-      -- direction = "horizontal",
-      -- direction = "tab",
-      direction = "vertical",
+      direction = "float",
       insert_mappings = true,
       open_mapping = [[<c-\>]],
       shading_factor = 2,
@@ -23,6 +20,8 @@ return {
       float_opts = {
         border = "curved",
         highlights = { border = "Normal", background = "Normal" },
+        width = math.floor(vim.o.columns * 0.99),
+        height = math.floor(vim.o.lines * 0.99),
       },
     },
   },

@@ -11,13 +11,14 @@ map(
   "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
   { desc = "Comment Block" }
 )
+
 -- Press jk fast to enter
 map("i", "jk", "<ESC>", { desc = "Quick escape." })
 
 -- ToggleTerm
 function _G.set_terminal_keymaps()
   local opts = { noremap = true }
-  -- vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
+  vim.api.nvim_buf_set_keymap(0, "t", "<esc>", [[<C-\><C-n>]], opts)
   vim.api.nvim_buf_set_keymap(0, "t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
   vim.api.nvim_buf_set_keymap(0, "t", "<C-j>", [[<C-\><C-n><C-W>j]], opts)
   vim.api.nvim_buf_set_keymap(0, "t", "<C-k>", [[<C-\><C-n><C-W>k]], opts)
@@ -27,6 +28,7 @@ local opts = { noremap = true }
 map("n", "<leader>tf", "<cmd>ToggleTerm direction=float size=40<CR>", opts)
 map("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=40<CR>", opts)
 map("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal size=10<CR>", opts)
+map("t", "<C-l>", "<C-l>", opts)
 
 -- ZenMode
 map("n", "<leader>uz", "<cmd>ZenMode<CR>", opts)
