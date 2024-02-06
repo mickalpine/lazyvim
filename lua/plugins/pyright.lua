@@ -14,7 +14,8 @@ return {
               analysis = {
                 autoSearchPaths = true,
                 autoImportCompletions = true,
-                typeCheckingMode = "basic",
+                typeCheckingMode = "standard",
+                diagnosticMode = "workspace",
               },
               disableOrganizeImports = true,
             },
