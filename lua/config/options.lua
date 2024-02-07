@@ -6,3 +6,4 @@ vim.opt.updatetime = 50
 vim.opt.number = false
 vim.opt.relativenumber = false
 vim.opt.list = false
+vim.opt.listchars = { tab = "▸ " }

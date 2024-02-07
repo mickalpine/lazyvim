@@ -12,6 +12,11 @@ vim.cmd("autocmd BufRead,BufNewFile *.tf set filetype=terraform")
 
 -- Associate .service files to systemd
 vim.cmd("autocmd BufRead,BufNewFile *.service set filetype=systemd")
+--
+-- Set conceal for markdown files
+-- vim.cmd("autocmd BufRead,BufNewFile *.md set conceallevel=2")
+
+vim.cmd("augroup pandoc_syntax | au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc | augroup END")
 
 -- LuaSnip Snippet History Fix (Seems to work really well, I think.)
 -- local luasnip_fix_augroup = vim.api.nvim_create_augroup("MyLuaSnipHistory", { clear = true })
