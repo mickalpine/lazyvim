@@ -16,7 +16,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      colorscheme = "nordic",
+      colorscheme = "catppuccin-mocha",
     },
   },
 
@@ -45,6 +45,7 @@ return {
   {
     "folke/tokyonight.nvim",
     keys = keys,
+    opts = { style = "moon" },
   },
 
   {

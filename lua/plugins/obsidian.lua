@@ -11,6 +11,12 @@ return {
   --   "BufReadPre path/to/my-vault/**.md",
   --   "BufNewFile path/to/my-vault/**.md",
   -- },
+
+  init = function()
+    -- Set conceal for markdown files
+    vim.cmd("autocmd BufRead,BufNewFile *.md set conceallevel=2")
+  end,
+
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
