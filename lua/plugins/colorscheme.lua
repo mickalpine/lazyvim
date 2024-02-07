@@ -16,7 +16,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "tundra",
     },
   },
 
@@ -51,6 +51,8 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    lazy = false,
+    ft = "markdown",
     keys = keys,
     opts = {
       no_italic = true,
