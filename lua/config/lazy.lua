@@ -1,10 +1,10 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
   -- bootstrap lazy.nvim
   -- stylua: ignore
   vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable", lazypath })
 end
-vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
+vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
@@ -23,7 +23,7 @@ require("lazy").setup({
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
   install = { colorscheme = { "tokyonight" } },
-  checker = { enabled = true, notify = false }, -- automatically check for plugin updates
+  checker = { enabled = false, notify = false }, -- automatically check for plugin updates
   change_detection = { notify = false }, -- automatically check for plugin updates
   performance = {
     rtp = {
@@ -33,10 +33,10 @@ require("lazy").setup({
         -- "matchit",
         -- "matchparen",
         "netrwPlugin",
-        -- "tarPlugin",
-        -- "tohtml",
+        "tarPlugin",
+        "tohtml",
         "tutor",
-        -- "zipPlugin",
+        "zipPlugin",
       },
     },
   },

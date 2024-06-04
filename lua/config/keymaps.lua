@@ -25,10 +25,24 @@ function _G.set_terminal_keymaps()
   -- vim.api.nvim_buf_set_keymap(0, "t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
 end
 local opts = { noremap = true }
-map("n", "<leader>tf", "<cmd>ToggleTerm direction=float size=40<CR>", opts)
-map("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical size=40<CR>", opts)
-map("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal size=10<CR>", opts)
+map("n", "<leader>tcf", "<cmd>ToggleTerm direction=float size=40<CR>", opts)
+map("n", "<leader>tcv", "<cmd>ToggleTerm direction=vertical size=40<CR>", opts)
+map("n", "<leader>tch", "<cmd>ToggleTerm direction=horizontal size=10<CR>", opts)
 map("t", "<C-l>", "<C-l>", opts)
 
 -- ZenMode
 map("n", "<leader>uz", "<cmd>ZenMode<CR>", opts)
+
+-- Shortcut to use blackhole register by default
+map("v", "c", '"_c', opts)
+map("v", "C", '"_C', opts)
+map("n", "c", '"_c', opts)
+map("n", "C", '"_C', opts)
+map("n", "dw", '"_dw', opts)
+map("v", "dw", '"_dw', opts)
+map("n", "diw", '"_diw', opts)
+map("v", "diw", '"_diw', opts)
+
+-- Align
+map("n", "<leader>ct", "vip:EasyAlign*<bar><cr>", { desc = "Align Markdown Table" })
+map("x", "<leader>ct", "vip:EasyAlign*<bar><cr>", { desc = "Align Markdown Table" })

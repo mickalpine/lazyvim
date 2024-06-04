@@ -16,7 +16,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      colorscheme = "tundra",
+      colorscheme = "rose-pine",
     },
   },
 
@@ -46,6 +46,33 @@ return {
     "folke/tokyonight.nvim",
     keys = keys,
     opts = { style = "moon" },
+  },
+
+  {
+    "rose-pine/neovim",
+    keys = keys,
+    name = "rose-pine",
+    opts = {
+      styles = { italic = false },
+      groups = {
+        border = "surface",
+      },
+      highlight_groups = {
+        -- Keyword = { bold = false, fg = "love" },
+        -- String = { bold = false, fg = "subtle" },
+        Comment = { bold = false, fg = "muted" },
+        -- ["@variable"] = { bold = false, fg = "gold" },
+        ["@keyword.return"] = { bold = false, fg = "love" },
+        ["@keyword.repeat"] = { bold = false, fg = "love" },
+        ["@keyword.conditional"] = { bold = false, fg = "love" },
+        ["@keyword.operator"] = { bold = true, fg = "love" },
+        ["@lsp.type.keyword"] = { bold = true, fg = "love" },
+        ["@lsp.type.operator"] = { bold = true, fg = "love" },
+        ["@punctuation.special"] = { fg = "pine" },
+        ["@punctuation.delimiter"] = { fg = "rose" },
+        ["@variable.builtin"] = { bold = false, fg = "pine" },
+      },
+    },
   },
 
   {

@@ -43,9 +43,9 @@ return {
       template = nil,
     },
 
+    new_notes_location = "notes_subdir",
     completion = {
       min_chars = 1,
-      new_notes_location = "notes_subdir",
     },
 
     templates = {

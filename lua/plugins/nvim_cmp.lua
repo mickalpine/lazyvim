@@ -6,6 +6,9 @@ return {
     keys = function()
       return {}
     end,
+    -- init = function()
+    --   require("luasnip").filetype_extend("python", { "pydoc" })
+    -- end,
   },
 
   -- override nvim-cmp and add cmp-emoji

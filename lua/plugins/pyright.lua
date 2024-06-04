@@ -1,5 +1,5 @@
 local on_attach = function(client, bufnr)
-  client.server_capabilities.hoverProvider = false
+  client.server_capabilities.hoverProvider = true
 end
 
 return {
