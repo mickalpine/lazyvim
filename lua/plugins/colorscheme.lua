@@ -1,6 +1,5 @@
-local Util = require("lazyvim.util")
 local keys = {
-  { "<leader>uC", Util.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
+  { "<leader>uC", LazyVim.pick("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
 }
 local nordic_colors = {
   -- Blacks. Not in base Nord.
