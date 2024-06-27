@@ -1,11 +1,12 @@
-if true then
-  return {}
-end
 return {
   {
     "neovim/nvim-lspconfig",
-    opts = function(_, opts)
-      opts.inlay_hints.enabled = false
-    end,
-  },
+    opts = {
+      diagnostics = {
+          underline = false,
+          virtual_text = false
+      },
+      codelens = { enabled = true }
+    }
+  }
 }
