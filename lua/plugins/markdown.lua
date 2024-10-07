@@ -2,6 +2,7 @@ return {
   {
     "iamcco/markdown-preview.nvim",
     ft = "markdown",
+    build = "cd app && yarn install",
   },
 
   -- use pandoc for markdown instead of Treesitter
@@ -29,5 +30,9 @@ return {
         },
       },
     },
+  },
+  {
+    "MeanderingProgrammer/markdown.nvim",
+    opts = { heading = { enabled = false } },
   },
 }

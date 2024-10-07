@@ -8,7 +8,9 @@ return {
         sources = {
           nls.builtins.code_actions.gomodifytags,
           nls.builtins.code_actions.impl,
-          nls.builtins.diagnostics.markdownlint.with({ extra_args = { "--disable", "MD013", "MD024", "MD047" } }),
+          nls.builtins.diagnostics.markdownlint.with({
+            extra_args = { "--disable", "MD013", "MD024", "MD047", "MD028" },
+          }),
           nls.builtins.diagnostics.staticcheck,
           nls.builtins.diagnostics.sqlfluff,
           nls.builtins.formatting.black,

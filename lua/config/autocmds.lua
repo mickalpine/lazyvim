@@ -13,5 +13,5 @@ vim.cmd("autocmd BufRead,BufNewFile *.tf set filetype=terraform")
 -- Associate .service files to systemd
 vim.cmd("autocmd BufRead,BufNewFile *.service set filetype=systemd")
 
--- Set the colorscheme for markdown files - Catppucin has better Treesitter highlighting
-vim.cmd("augroup markdown_color_theme | au! FileType markdown colorscheme catppuccin-mocha | augroup END")
+-- -- Set the colorscheme for markdown files - Catppucin has better Treesitter highlighting
+-- vim.cmd("augroup markdown_color_theme | au! FileType markdown colorscheme catppuccin-mocha | augroup END")

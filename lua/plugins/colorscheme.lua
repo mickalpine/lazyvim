@@ -1,13 +1,6 @@
 local keys = {
   { "<leader>uC", LazyVim.pick("colorscheme", { enable_preview = true }), desc = "Colorscheme with preview" },
 }
-local nordic_colors = {
-  -- Blacks. Not in base Nord.
-  black0 = "#191D24",
-  black1 = "#1E222A",
-  -- Slightly darker than bg.  Very useful for certain popups
-  black2 = "#222630",
-}
 
 return {
   {
@@ -15,7 +8,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "kanagawa",
     },
   },
 
@@ -27,24 +20,29 @@ return {
   },
 
   {
-    "AlexvZyl/nordic.nvim",
+    "sainnhe/gruvbox-material",
     keys = keys,
-    opts = {
-      bold_keywords = true,
-      reduced_blue = false,
-      swap_backgrounds = true,
-      override = {
-        Normal = {
-          bg = nordic_colors.black2,
-        },
-      },
-    },
+    config = function()
+      vim.g.gruvbox_material_transparent_background = 0
+      vim.g.gruvbox_material_foreground = "mix"
+      vim.g.gruvbox_material_background = "hard" -- soft, medium, hard
+      vim.g.gruvbox_material_ui_contrast = "high" -- The contrast of line numbers, indent lines, etc.
+      vim.g.gruvbox_material_float_style = "bright" -- Background of floating windows
+      vim.g.gruvbox_material_statusline_style = "material"
+      vim.g.gruvbox_material_cursor = "auto"
+
+      -- vim.g.gruvbox_material_colors_override = { bg0 = '#000000' } -- #0e1010
+      -- vim.g.gruvbox_material_colors_override = { bg0 = "#121212" }
+      -- vim.g.gruvbox_material_better_performance = 1
+
+      -- vim.cmd.colorscheme("gruvbox-material")
+    end,
   },
 
   {
     "folke/tokyonight.nvim",
     keys = keys,
-    opts = { style = "moon" },
+    opts = { style = "night" },
   },
 
   {
@@ -65,6 +63,7 @@ return {
         ["@keyword.repeat"] = { bold = false, fg = "love" },
         ["@keyword.conditional"] = { bold = false, fg = "love" },
         ["@keyword.operator"] = { bold = true, fg = "love" },
+        ["@operator"] = { bold = true, fg = "love" },
         ["@lsp.type.keyword"] = { bold = true, fg = "love" },
         ["@lsp.type.operator"] = { bold = true, fg = "love" },
         ["@punctuation.special"] = { fg = "pine" },

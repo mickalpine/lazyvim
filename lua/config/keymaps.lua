@@ -46,3 +46,6 @@ map("v", "diw", '"_diw', opts)
 -- Align
 map("n", "<leader>ct", "vip:EasyAlign*<bar><cr>", { desc = "Align Markdown Table" })
 map("x", "<leader>ct", "vip:EasyAlign*<bar><cr>", { desc = "Align Markdown Table" })
+
+-- close all buffers except current
+map("n", "<leader>bc", ":up | silent! %bd | e# | bd#<CR>", { desc = "Close all buffers except current", silent = true })

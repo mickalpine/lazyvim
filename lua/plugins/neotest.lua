@@ -10,8 +10,16 @@ return {
     opts = {
       adapters = {
         ["neotest-python"] = {
-          args = { "--log-level", "DEBUG" },
+          args = { "-vv", "--log-level", "DEBUG" },
         },
+      },
+      output = {
+        open_on_run = false,
+      },
+
+      quickfix = {
+        enabled = false,
+        open = false,
       },
     },
   },
