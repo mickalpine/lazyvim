@@ -1,3 +1,6 @@
+local on_attach = function(client, bufnr)
+  client.server_capabilities.semanticTokensProvider = false
+end
 return {
   {
     "ray-x/go.nvim",
@@ -26,5 +29,16 @@ return {
     dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
     ft = { "go", "gomod", "gosum", "gowork" },
     config = true,
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        gopls = {
+          on_attach = on_attach,
+        },
+      },
+    },
   },
 }

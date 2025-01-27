@@ -34,7 +34,7 @@ return {
           "--line-number",
           "--column",
           "--smart-case",
-          "-uu",
+          "-u",
           --[[
               -u, --unrestricted
               Reduce the level of "smart" searching. A single -u won't respect .gitignore

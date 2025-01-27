@@ -8,6 +8,7 @@ return {
       },
       codelens = { enabled = true },
       inlay_hints = { enabled = false },
+      -- document_highlight = { enabled = false },
     },
   },
 }

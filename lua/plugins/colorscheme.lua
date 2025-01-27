@@ -8,7 +8,7 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      colorscheme = "kanagawa",
+      colorscheme = "tundra",
     },
   },
 
@@ -16,7 +16,10 @@ return {
     "sam4llis/nvim-tundra",
     keys = keys,
     branch = "dev",
-    commit = "1173df4c8c0fdf0fdfc24aa2d04fd1965204a97e",
+    -- commit = "1173df4c8c0fdf0fdfc24aa2d04fd1965204a97e",
+    -- config = function()
+    --   vim.g.tundra_biome = "jungle"
+    -- end,
   },
 
   {
